@@ -14,7 +14,7 @@ object Analysis {
     data.cache()
 
     // Marketing Success Rate
-    val numOfPeopleSubscribed = data.
+    /*val numOfPeopleSubscribed = data.
                                 filter(rec => rec.split(";")(16).equals("yes")).
                                 count()
 
@@ -24,6 +24,19 @@ object Analysis {
                                   setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
 
     // 11.7 %
-    println(successRate)
+    println(successRate)*/
+
+    // Marketing Failure Rate
+    val numOfPeopleNotSubscribed = data.
+      filter(rec => rec.split(";")(16).equals("no")).
+      count()
+
+    val totalNumOfPeople = data.count()
+
+    val failureRate = BigDecimal(((numOfPeopleNotSubscribed.toFloat)/(totalNumOfPeople.toFloat))*100).
+      setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+
+    // 88.3 %
+    println(failureRate)
   }
 }
