@@ -15,5 +15,5 @@ You are given the campaign results which you need to analyze and give a 1000 fee
 
 ## Questions Answered
 
-#### Marketing Success Rate (No of people subscribed / total number of entries)
-**11.7 % marketing success rate of the campaign**
+#### Marketing Success Rate (No of people subscribed / total number of entries) 
+> **11.7 % marketing success rate of the campaign**
